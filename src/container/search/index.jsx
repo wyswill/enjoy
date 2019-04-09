@@ -35,7 +35,7 @@ class Search extends React.Component {
   }
   lode_data(isLode = null) {
     let { sx } = this.props.location_reduc;
-    let url = `http://localhost:8080/location?city=${sx}`;
+    let url = `http://localhost:8088/location?city=${sx}`;
     axios(url).then(res => {
       if (!isLode) {
         this.setState({

@@ -12,7 +12,7 @@ export default class Shop_info extends React.Component {
     items: []
   };
   componentDidMount() {
-    axios.get("http://localhost:8080/getShop_info").then(res => {
+    axios.get("http://localhost:8088/getShop_info").then(res => {
       this.setState({
         items: res.data.items
       });

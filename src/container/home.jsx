@@ -24,7 +24,7 @@ class Home extends React.Component {
         imgSrc: imgSrc
       });
     } else {
-      axios("http://localhost:8080/bannerImgs").then(res => {
+      axios("http://localhost:8088/bannerImgs").then(res => {
         this.setState({
           imgSrc: res.data
         });
@@ -34,7 +34,7 @@ class Home extends React.Component {
       });
     }
     let { sx } = this.props.locations;
-    let url = `http://localhost:8080/location?city=${sx}`;
+    let url = `http://localhost:8088/location?city=${sx}`;
     axios(url).then(res => {
       this.setState({
         house: res.data.hous

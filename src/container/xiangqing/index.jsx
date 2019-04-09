@@ -20,7 +20,7 @@ class Xiangqing extends React.Component {
   };
   componentDidMount() {
     let location = this.props.location_reduc.sx;
-    let url = `http://localhost:8080/xiangqing?city=${location}`;
+    let url = `http://localhost:8088/xiangqing?city=${location}`;
     axios(url).then(ele => {
       this.setState({
         hous_info: ele.data
@@ -123,6 +123,7 @@ class Xiangqing extends React.Component {
             </div>
           </div>
           <div className="bottom">
+          <div className="icons"></div>
             <div className="btn" onClick={this.buy.bind(this)}>
               购买
             </div>

@@ -5,11 +5,11 @@ const Mock = require("mockjs");
 //获取图片url
 function get_img_src(path, cb) {
   let imgArr = [];
-  const basePath = "/Users/mac/前端/enjoy/src/static/images/";
+  const basePath = "/Users/mac/code/enjoy/server/static/images/";
   fs.readdir(basePath + path, (err, data) => {
-    if (err) res.send(err);
+    if (err) console.log(err);
     data.map(ele => {
-      let t = `http://localhost:8080/images/${path}/${ele}`;
+      let t = `http://localhost:8088/images/${path}/${ele}`;
       imgArr.push(t);
     });
     cb(imgArr);
@@ -22,6 +22,9 @@ router.all("*", (req, res, next) => {
   });
   next();
 });
+router.get('/', (req, res) => {
+  res.send('ok!')
+})
 //首页轮播图
 router.get("/bannerImgs", (req, res) => {
   get_img_src("banner", imgArr => {
@@ -130,7 +133,7 @@ router.get("/getShop_info", (req, res) => {
           ],
           "previce|200-500": 200,
           "img|1": imgArr.filter(
-            ele => ele != "http://localhost:8080/images/woshi/.DS_Store"
+            ele => ele != "http://localhost:8088/images/woshi/.DS_Store"
           )
         }
       ]
