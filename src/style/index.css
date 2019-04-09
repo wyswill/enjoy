@@ -345,6 +345,15 @@
 .Xiangqing .bottom .icons {
   width: 2.39rem;
   height: .8rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.Xiangqing .bottom .icons img {
+  width: 0.4rem;
+  height: 0.4rem;
+  margin: 0 10px;
 }
 .Xiangqing .bottom .btn {
   display: inline-block;
