@@ -863,3 +863,31 @@
   left: 0;
   background: #ccc;
 }
+.container .header {
+  height: 5rem;
+  background: #ff5555;
+}
+.container .header h1 {
+  text-align: center;
+  line-height: 5rem;
+  font-size: 55px;
+  color: #fff;
+}
+.container .ant-form {
+  margin: 0 10%;
+  position: relative;
+  bottom: 60px;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 12px -3px #ff5556;
+}
+.container .ant-form .ant-input-affix-wrapper {
+  height: 50px;
+}
+.container .ant-form .ant-form-item {
+  margin-bottom: 40px;
+}
+.container .ant-form .ant-btn-primary {
+  background: #ff5555;
+  border-color: #ff5555;
+}
